@@ -6,4 +6,4 @@
 
 ## Screenshots
 
-![Full Screen](/screenshots/full.png)
+![Full Screen](https://github.com/R4scal/grafana-dashboards/raw/master/MikroTik%20Router/screenshots/full.png)
