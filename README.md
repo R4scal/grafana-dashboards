@@ -9,4 +9,5 @@ The objective is try crate beautiful dashboards using data in zabbix and graphit
 ## TODO
 
 - [x] Create dashboard for MikroTik Router
+- [x] Elasticsearch overview
 - [ ] Create dashboard for ZFS
