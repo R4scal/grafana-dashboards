@@ -1,12 +1,22 @@
 {
   "annotations": {
-    "list": []
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
   },
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
   "hideControls": false,
-  "id": 6,
+  "id": 11,
   "links": [],
   "refresh": "1m",
   "rows": [
@@ -79,7 +89,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "System uptime"
@@ -89,7 +99,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -171,7 +186,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "DHCP leases"
@@ -181,7 +196,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -263,7 +283,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "CPU 1 load"
@@ -273,7 +293,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -356,7 +381,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "Used memory"
@@ -366,7 +391,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -448,7 +478,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "System version and hw"
@@ -458,7 +488,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -528,7 +563,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "CPU 1 load"
@@ -538,10 +573,25 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
-          "thresholds": [],
+          "thresholds": [
+            {
+              "colorMode": "custom",
+              "fill": false,
+              "line": true,
+              "lineColor": "rgb(255, 0, 0)",
+              "op": "gt",
+              "source": "zabbix",
+              "value": 90
+            }
+          ],
           "timeFrom": null,
           "timeShift": null,
           "title": "CPU load",
@@ -635,7 +685,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "Used memory"
@@ -645,7 +695,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             },
             {
               "application": {
@@ -656,7 +711,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "Total memory"
@@ -666,7 +721,12 @@
                 "showDisabledItems": false
               },
               "refId": "B",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -755,7 +815,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "ICMP response time"
@@ -765,7 +825,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             },
             {
               "application": {
@@ -776,7 +841,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "ICMP loss"
@@ -786,10 +851,25 @@
                 "showDisabledItems": false
               },
               "refId": "B",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
-          "thresholds": [],
+          "thresholds": [
+            {
+              "colorMode": "custom",
+              "fill": false,
+              "line": true,
+              "lineColor": "rgb(255, 0, 0)",
+              "op": "gt",
+              "source": "zabbix",
+              "value": 20
+            }
+          ],
           "timeFrom": null,
           "timeShift": null,
           "title": "ICMP response time",
@@ -888,7 +968,7 @@
             }
           ],
           "spaceLength": 10,
-          "span": 5,
+          "span": 6,
           "stack": true,
           "steppedLine": false,
           "targets": [
@@ -901,38 +981,22 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "/traffic on interface ether5/"
+                "filter": "/traffic on interface ether1/"
               },
               "mode": 0,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
-            },
-            {
-              "application": {
-                "filter": "Network"
-              },
-              "functions": [],
-              "group": {
-                "filter": "Routers"
-              },
-              "host": {
-                "filter": "smr-rb951g-n1"
-              },
-              "item": {
-                "filter": "/traffic on interface ether4/"
-              },
-              "mode": 0,
-              "options": {
-                "showDisabledItems": false
-              },
-              "refId": "B",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -1021,7 +1085,7 @@
             }
           ],
           "spaceLength": 10,
-          "span": 7,
+          "span": 6,
           "stack": true,
           "steppedLine": false,
           "targets": [
@@ -1034,17 +1098,22 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "/traffic on interface wlan1/"
+                "filter": "/traffic on interface wlan/"
               },
               "mode": 0,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             },
             {
               "application": {
@@ -1055,7 +1124,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/traffic on interface ether2/"
@@ -1065,7 +1134,12 @@
                 "showDisabledItems": false
               },
               "refId": "B",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -1161,7 +1235,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/errors on interface eth/"
@@ -1171,7 +1245,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -1265,7 +1344,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/Operational status of interface/"
@@ -1275,7 +1354,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "title": "Interface status (operational)",
@@ -1336,7 +1420,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/Admin status of interface/"
@@ -1346,7 +1430,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "title": "Interface status (admin)",
@@ -1441,17 +1530,22 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "/Incoming traffic/"
+                "filter": "/Incoming traffic from \\(2G\\)/"
               },
               "mode": 0,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             },
             {
               "application": {
@@ -1488,17 +1582,600 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "/Outgoing traffic/"
+                "filter": "/Outgoing traffic to \\(2G\\)/"
               },
               "mode": 0,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "B",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Device traffic",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "buckets": null,
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "bps",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "Zabbix",
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "100",
+          "id": 32,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Wireless"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Routers"
+              },
+              "host": {
+                "filter": "$router"
+              },
+              "item": {
+                "filter": "AP SSID"
+              },
+              "mode": 2,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "",
+          "title": "SSID",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "Zabbix",
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "100",
+          "id": 19,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Wireless"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Routers"
+              },
+              "host": {
+                "filter": "$router"
+              },
+              "item": {
+                "filter": "AP client count"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "",
+          "title": "AP client count",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "Zabbix",
+          "format": "none",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "100",
+          "id": 20,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Wireless"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Routers"
+              },
+              "host": {
+                "filter": "$router"
+              },
+              "item": {
+                "filter": "AP frequency"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "",
+          "title": "AP frequency",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": false,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "datasource": "Zabbix",
+          "format": "dB",
+          "gauge": {
+            "maxValue": 100,
+            "minValue": 0,
+            "show": false,
+            "thresholdLabels": false,
+            "thresholdMarkers": true
+          },
+          "height": "100",
+          "id": 21,
+          "interval": null,
+          "links": [],
+          "mappingType": 1,
+          "mappingTypes": [
+            {
+              "name": "value to text",
+              "value": 1
+            },
+            {
+              "name": "range to text",
+              "value": 2
+            }
+          ],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "rangeMaps": [
+            {
+              "from": "null",
+              "text": "N/A",
+              "to": "null"
+            }
+          ],
+          "span": 3,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "tableColumn": "",
+          "targets": [
+            {
+              "application": {
+                "filter": "Wireless"
+              },
+              "functions": [],
+              "group": {
+                "filter": "Routers"
+              },
+              "host": {
+                "filter": "$router"
+              },
+              "item": {
+                "filter": "AP noise floor"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            }
+          ],
+          "thresholds": "",
+          "title": "AP noise floor",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "N/A",
+              "value": "null"
+            }
+          ],
+          "valueName": "current"
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": true,
+      "title": "Wireless 2G",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
+      "height": "211",
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "dashLength": 10,
+          "dashes": false,
+          "datasource": "Zabbix",
+          "fill": 1,
+          "id": 31,
+          "legend": {
+            "avg": false,
+            "current": false,
+            "max": false,
+            "min": false,
+            "show": false,
+            "total": false,
+            "values": false
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [
+            {
+              "alias": "/Outgoing traffic/",
+              "stack": "B",
+              "transform": "negative-Y"
+            },
+            {
+              "alias": "/Incoming traffic/",
+              "stack": "A"
+            }
+          ],
+          "spaceLength": 10,
+          "span": 6,
+          "stack": true,
+          "steppedLine": false,
+          "targets": [
+            {
+              "application": {
+                "filter": "Wireless"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Transform",
+                    "defaultParams": [
+                      100
+                    ],
+                    "name": "scale",
+                    "params": [
+                      {
+                        "name": "factor",
+                        "options": [
+                          100,
+                          0.01,
+                          10,
+                          -1
+                        ],
+                        "type": "float"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "8"
+                  ],
+                  "text": "scale(8)"
+                }
+              ],
+              "group": {
+                "filter": "Routers"
+              },
+              "host": {
+                "filter": "$router"
+              },
+              "item": {
+                "filter": "/Incoming traffic from \\(5G\\)/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "A",
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
+            },
+            {
+              "application": {
+                "filter": "Wireless"
+              },
+              "functions": [
+                {
+                  "def": {
+                    "category": "Transform",
+                    "defaultParams": [
+                      100
+                    ],
+                    "name": "scale",
+                    "params": [
+                      {
+                        "name": "factor",
+                        "options": [
+                          100,
+                          0.01,
+                          10,
+                          -1
+                        ],
+                        "type": "float"
+                      }
+                    ]
+                  },
+                  "params": [
+                    "8"
+                  ],
+                  "text": "scale(8)"
+                }
+              ],
+              "group": {
+                "filter": "Routers"
+              },
+              "host": {
+                "filter": "$router"
+              },
+              "item": {
+                "filter": "/Outgoing traffic to \\(5G\\)/"
+              },
+              "mode": 0,
+              "options": {
+                "showDisabledItems": false
+              },
+              "refId": "B",
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -1602,17 +2279,22 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "AP SSID"
+                "filter": "AP SSID (5G)"
               },
               "mode": 2,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -1647,7 +2329,7 @@
             "thresholdMarkers": true
           },
           "height": "100",
-          "id": 19,
+          "id": 33,
           "interval": null,
           "links": [],
           "mappingType": 1,
@@ -1693,17 +2375,22 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "AP client count"
+                "filter": "AP client count (5G)"
               },
               "mode": 0,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -1717,7 +2404,7 @@
               "value": "null"
             }
           ],
-          "valueName": "avg"
+          "valueName": "current"
         },
         {
           "cacheTimeout": null,
@@ -1738,7 +2425,7 @@
             "thresholdMarkers": true
           },
           "height": "100",
-          "id": 20,
+          "id": 34,
           "interval": null,
           "links": [],
           "mappingType": 1,
@@ -1784,17 +2471,22 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "AP frequency"
+                "filter": "AP frequency (5G)"
               },
               "mode": 0,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -1820,7 +2512,7 @@
             "rgba(50, 172, 45, 0.97)"
           ],
           "datasource": "Zabbix",
-          "format": "dB",
+          "format": "none",
           "gauge": {
             "maxValue": 100,
             "minValue": 0,
@@ -1829,7 +2521,7 @@
             "thresholdMarkers": true
           },
           "height": "100",
-          "id": 21,
+          "id": 35,
           "interval": null,
           "links": [],
           "mappingType": 1,
@@ -1875,17 +2567,22 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
-                "filter": "AP noise floor"
+                "filter": "AP noise floor (5G)"
               },
               "mode": 0,
               "options": {
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -1906,7 +2603,7 @@
       "repeatIteration": null,
       "repeatRowId": null,
       "showTitle": true,
-      "title": "Wireless",
+      "title": "Wireless 5G",
       "titleSize": "h6"
     },
     {
@@ -1972,17 +2669,17 @@
                     ]
                   },
                   "params": [
-                    "/Signal strength \\((.*)\\)/",
-                    "$1"
+                    "/Signal strength \\((.*)\\) \\((.*)\\)/",
+                    "$1 $2"
                   ],
-                  "text": "replaceAlias(/Signal strength \\((.*)\\)/, $1)"
+                  "text": "replaceAlias(/Signal strength \\((.*)\\) \\((.*)\\)/, $1 $2)"
                 }
               ],
               "group": {
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/Signal strength/"
@@ -1992,7 +2689,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -2048,6 +2750,9 @@
           "heatmap": {},
           "highlightCards": true,
           "id": 23,
+          "legend": {
+            "show": false
+          },
           "links": [],
           "maxDataPoints": "10000",
           "span": 6,
@@ -2061,7 +2766,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/Signal strength/"
@@ -2071,7 +2776,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "title": "Signal strength heatmap",
@@ -2153,7 +2863,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/Rx signal strength for Ch/"
@@ -2163,7 +2873,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -2243,7 +2958,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "/Signal to noise/"
@@ -2253,7 +2968,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -2301,7 +3021,7 @@
       "titleSize": "h6"
     },
     {
-      "collapse": false,
+      "collapse": true,
       "height": "211",
       "panels": [
         {
@@ -2346,7 +3066,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "UPS line voltage"
@@ -2356,7 +3076,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             },
             {
               "application": {
@@ -2367,7 +3092,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "UPS output voltage"
@@ -2376,7 +3101,12 @@
               "options": {
                 "showDisabledItems": false
               },
-              "refId": "B"
+              "refId": "B",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             },
             {
               "application": {
@@ -2387,7 +3117,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "UPS battery voltage"
@@ -2396,7 +3126,12 @@
               "options": {
                 "showDisabledItems": false
               },
-              "refId": "C"
+              "refId": "C",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": [],
@@ -2502,7 +3237,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "UPS model"
@@ -2512,7 +3247,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -2595,7 +3335,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "UPS battery charge"
@@ -2605,7 +3345,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -2688,7 +3433,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "UPS load"
@@ -2698,7 +3443,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -2781,7 +3531,7 @@
                 "filter": "Routers"
               },
               "host": {
-                "filter": "smr-rb951g-n1"
+                "filter": "$router"
               },
               "item": {
                 "filter": "UPS remaining"
@@ -2791,7 +3541,12 @@
                 "showDisabledItems": false
               },
               "refId": "A",
-              "target": ""
+              "target": "",
+              "triggers": {
+                "acknowledged": 2,
+                "count": true,
+                "minSeverity": 3
+              }
             }
           ],
           "thresholds": "",
@@ -2813,11 +3568,50 @@
   "schemaVersion": 14,
   "style": "dark",
   "tags": [
-    "dashboard",
-    "mikrotik"
+    "mikrotik",
+    "zabbix",
+    "snmp"
   ],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "text": "Zabbix",
+          "value": "Zabbix"
+        },
+        "hide": 2,
+        "label": null,
+        "name": "ds",
+        "options": [],
+        "query": "alexanderzobnin-zabbix-datasource",
+        "refresh": 1,
+        "regex": "Zabbix",
+        "type": "datasource"
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "nw-rb952-n1",
+          "value": "nw-rb952-n1"
+        },
+        "datasource": "$ds",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "router",
+        "options": [],
+        "query": "Routers.*",
+        "refresh": 1,
+        "regex": "",
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
   },
   "time": {
     "from": "now-3h",
@@ -2850,5 +3644,5 @@
   },
   "timezone": "browser",
   "title": "Mikrotik Router",
-  "version": 15
+  "version": 24
 }
