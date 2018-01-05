@@ -6,4 +6,4 @@
 
 ## Screenshots
 
-![Full Screen](https://github.com/R4scal/grafana-dashboards/raw/master/Nvidia%20GPU/screenshots/full.png)
+![Full Screen](https://raw.githubusercontent.com/R4scal/grafana-dashboards/master/NVIDIA%20GPU/screenshots/full.png)
