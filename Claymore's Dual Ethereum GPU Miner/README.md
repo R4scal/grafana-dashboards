@@ -1,12 +1,12 @@
-# Dashboard for NVIDIA GPU
+# Dashboard for Claymore's Dual Ethereum GPU Miner
 
 ##  Datasource
 
-- Zabbix, Template https://github.com/R4scal/zabbix-templates/tree/master/Nvidia%20GPU
+- Zabbix, Template https://github.com/R4scal/zabbix-templates/tree/master/Claymore's%20Dual%20Ethereum%20GPU%20Miner
 
 ## Screenshots
 
-![Full Screen](https://raw.githubusercontent.com/R4scal/grafana-dashboards/master/NVIDIA%20GPU/screenshots/full.png)
+![Full Screen](https://raw.githubusercontent.com/R4scal/grafana-dashboards/master/Claymore's%20Dual%20Ethereum%20GPU%20Miner/screenshots/full.png)
 
 ## Donations
 
